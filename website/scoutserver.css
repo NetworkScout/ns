@@ -1,0 +1,99 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body
+{
+        background-color:#FFF;
+        margin:auto;
+}
+
+p
+{
+        text-align:center;
+        margin: 10px 10px 10px 10px;
+}
+
+#head
+{
+        background-color: #676767;
+        width:100%;
+        box-shadow: 10px 10px 5px #888888;
+        border-bottom:medium solid #393939;
+        margin-bottom: 20px;
+}
+
+h1
+{
+        text-align:center;
+        font-size:42px;
+        font-family:"Arial Black", Gadget, sans-serif, "Helvetica Neue UltraLight Italic";
+        color:#FFF;
+}
+
+h2
+{
+        text-align:center;
+        font-family:"Arial Black", Gadget, sans-serif, "Helvetica Neue UltraLight Italic";
+}
+
+#main
+{
+        border: thin solid #CCC;
+        border-radius: 15px;
+        box-shadow: 10px 10px 5px #888888;
+        margin:auto;
+        width:80%;
+}
+
+#output_div
+{
+        margin:auto;
+        width:96%%;
+}
+
+table
+{
+        padding: 10px 10px 10px 10px;
+        margin: auto;
+        height: auto;
+        width:100%;
+        font-size: 15px;
+        text-align: center;
+}
+
+th
+{
+        background-color:676767;
+        border:none;
+        text-align:left;
+        font-family:"Arial Black", Gadget, sans-serif, "Helvetica Neue UltraLight Italic";
+        color:FFF;
+        width:20%;
+}
+
+td
+{
+        background-color:C0C0C0;
+        border:none;
+        width:20%;
+}
+
+#space
+{
+        height:20px;
+        float:bottom;
+}
+
+#foot
+{
+        margin-top: 20px;
+        border-top:medium solid #CCC;
+        width:100%;
+}
+
+#foot p
+{
+        text-align:right;
+}
+
+

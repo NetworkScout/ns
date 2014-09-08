@@ -1,0 +1,21 @@
+import datetime
+
+def nslog(alert):
+
+    def ipgrab():
+                cmd = "ip addr show eth0 | grep inet | awk '{print $2}' | cut -d/ -f1"
+                p = subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE)
+                output = p.communicate()[0]
+                return output
+
+    ip = " "
+    ip = ipgrab()
+    ip = ip.replace('\n', '')
+    time = datetime.datetime.now().strftime("%y-%m-%d-%H-%M-%S")
+    log = " "
+
+    log = (ip + ',' + time + ',ALERT,' + alert + '\n')
+
+    fl = open("/var/artillery/log/logs.txt",'a')
+    fl.write( (log) )
+    fl.close()
