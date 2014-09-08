@@ -11,17 +11,12 @@ Network Scout must be ran from the home directory. To setup NS, do the following
 <ol>
   <li>Download Network Scout</li>
   <li>Type "cd"</li>
-  <li>Type "sudo python NS/nssetup.py"</li>
+  <li>Type "sudo python ns/nssetup.py"</li>
   <li>Follow the instructions</li>
 </ol>
 Setup script works with server and client sides.
 
-###
-Tech Details:
 
-Source contains core functions
-Stuff folder holds MySQL scripts, server recieved information and code needed to modify artillery.
-Website folder holds the website information until the setup script can move it.
 Startup folder has all the init scripts for the following services:
 <ul>
   <li>shutdown_button</li>
