@@ -1,13 +1,13 @@
 Network Scout
 ==
 
-Network Scout (NS) is an extension to Artillery. NS allows you to access log files from multiple clients.
+Network-Scout (NS) is an extension to Artillery. NS allows you to access log files from multiple clients.
 
-Network Scout is a python program, allowing <a href=https://github.com/trustedsec/artillery>artillery</a> to send logs to a centralized server. Network Scout has a pre-built client and server side. Network Scout can easily be set up using the provided setup script.
+Network-Scout is a python program, allowing <a href=https://github.com/trustedsec/artillery>artillery</a> to send logs to a centralized server. Network Scout has a pre-built client and server side. Network Scout can easily be set up using the provided setup script.
 
 ###
 Notes:
-Network Scout must be ran from the home directory. To setup NS, do the following:
+Network-Scout must be ran from the home directory. To setup NS, do the following:
 <ol>
   <li>Download Network Scout</li>
   <li>Type "cd"</li>
