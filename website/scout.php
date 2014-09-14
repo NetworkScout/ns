@@ -3,11 +3,11 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="A Webpage created to be the home page of Undergraduate Research Proje$
-<meta name="keywords" content="Network, Scout, Security, Undergraduate Research" />
+<meta name="keywords" content="Network-Scout, Security, Undergraduate Research" />
 <meta name="author" content="Aedan Somerville and Shawn Jordan" />
 <meta HTTP-EQUIV="refresh" content="100">
 
-<title>Scout Server</title>
+<title>Scout-Server</title>
 
 <link rel="stylesheet" type="text/css" href="scoutserver.css" />
 
@@ -18,7 +18,7 @@
 <!-- HEADER OF THE WEB PAGE -->
 <div id="head">
         <h1>
-        <strong>Scout Network Security</strong>
+        <strong>Scout-Network</strong>
         </h1>
 </div>
 

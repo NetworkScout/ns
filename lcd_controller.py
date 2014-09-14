@@ -1,9 +1,9 @@
 #!/usr/bin/python
 ##################################################################
-#Network Scout - An Addition to Artillery
+#Network-Scout - An Addition to Artillery
 #An artillery logging and web interface
 #By Shawn Jordan and Aedan Somerville
-#Special thanks to Dave Kennedy, DOW Chemical Co.
+#Special thanks to Dave Kennedy, DOW Chemical Co., Marshall University
 #Adafruit, Jusbour and the Open Source Community
 ########################## GO HERD ###############################
 ##################################################################
@@ -36,7 +36,7 @@ def artillery_status():
 		message = "Artillery..Error\n"
 		return message
 
-#Discovers if Network Scout Server is running
+#Discovers if Network-Scout Server is running
 def nsserver_status():
 	proc = subprocess.Popen("ps aux | grep nsserver.py", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 	stdout = proc.communicate()

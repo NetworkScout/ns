@@ -1,9 +1,9 @@
 #!/usr/bin/python
 ##################################################################
-#Network Scout - An Addition to Artillery
+#Network-Scout - An Addition to Artillery
 #An artillery logging and web interface
 #By Shawn Jordan and Aedan Somerville
-#Special thanks to Dave Kennedy, DOW Chemical Co.
+#Special thanks to Dave Kennedy, DOW Chemical Co., Marshall University
 #Adafruit, Jusbour and the Open Source Community
 ########################## GO HERD ###############################
 ##################################################################
@@ -22,9 +22,9 @@ option = 0
 menuopt = 0
 
 try:
-	print("Welcome to Network Scout - An addition logging application for Artillery.")
+	print("Welcome to Network-Scout - An addition logging application for Artillery.")
 	print("If you are installing the client side, please download artillery first.\n")
-	print("OPTIONS: \n1. Install Network Scout Server\n2. Install Network Scout Client \n3. Uninstall Network Scout \n4. Exit")
+	print("OPTIONS: \n1. Install Network-Scout Server\n2. Install Network-Scout Client \n3. Uninstall Network Scout \n4. Exit")
 	menuopt = input("Please select one:    ")
 
 	if menuopt is 2 and os.path.isdir("/var/artillery/"):
@@ -40,7 +40,7 @@ try:
 		option = 3
 		pass
 	elif menuopt is 3:
-		print "Network Scout was not detected and could not be uninstalled."
+		print "Network-Scout was not detected and could not be uninstalled."
 		sys.exit()
 	elif menuopt is 4:
 		sys.exit()
@@ -49,7 +49,7 @@ try:
 		sys.exit()
 	
 	if option == 2:
-		print("[*]********** Installing network scout...")
+		print("[*]********** Installing network-scout...")
 		core.kill_artillery()
 		os.mkdir("/var/networkscout")
 		subprocess.Popen("cp -r Project_Network_Scout/* /var/networkscout/", shell=True).wait()
@@ -82,7 +82,7 @@ try:
         	filewrite.close()
 		
 		# install to rc.local
-		print "[*]********** Adding Network Scout into startup through init scripts..."
+		print "[*]********** Adding Network-Scout into startup through init scripts..."
 		
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/nsclient"):
@@ -151,7 +151,7 @@ try:
 		subprocess.Popen("sudo apt-get install python-rpi.gpio", shell=True).wait()
 
 		# install to rc.local
-		print "[*]********** Adding Network Scout into startup through init scripts..."
+		print "[*]********** Adding Network-Scout into startup through init scripts..."
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/nsserver"):
 				fileopen = file("./Project_Network_Scout/startup/startup_network_scout_server", "r")
@@ -217,7 +217,7 @@ try:
 			pass
 				
 	elif option == 3:
-		answer = raw_input("Do you want to uninstall network scout: [ yes | no }    ")
+		answer = raw_input("Do you want to uninstall network-scout: [ yes | no }    ")
 		if answer.lower() == "y" or answer.lower() == "yes":
 			subprocess.Popen("rm -rf /var/networkscout", shell=True)
 			if os.path.isfile("/etc/init.d/nsclient"):
@@ -232,11 +232,11 @@ try:
 				subprocess.Popen("rm /var/www/*", shell=True)
 				subprocess.Popen("apt-get purge `dpkg -l | awk -F ' ' ' /php|mysql|otherpackages/ { print $2 } '`", shell=True)
 				
-			print "[*] Network Scout has been uninstalled. Manually kill the process if it is still running."
+			print "[*] Network-Scout has been uninstalled. Manually kill the process if it is still running."
 				
 	else:
-		print "There was an issue installing Network Scout."
+		print "There was an issue installing Network-Scout."
 		
 except Exception, e:
-	print("There was an issue installing network scout") + format(e)
+	print("There was an issue installing network-scout") + format(e)
 	sys.exit() 

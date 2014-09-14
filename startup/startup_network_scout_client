@@ -1,7 +1,7 @@
 #!/bin/sh
  
 ### BEGIN INIT INFO
-# Provides:          Network Scout Client
+# Provides:          Network-Scout Client
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Default-Start:     2 3 4 5

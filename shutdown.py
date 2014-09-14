@@ -1,9 +1,9 @@
 #!/usr/bin/python
 ##################################################################
-#Network Scout - An Addition to Artillery
+#Network-Scout - An Addition to Artillery
 #An artillery logging and web interface
 #By Shawn Jordan and Aedan Somerville
-#Special thanks to Dave Kennedy, DOW Chemical Co.
+#Special thanks to Dave Kennedy, DOW Chemical Co., Marshall University
 #Adafruit, Jusbour and the Open Source Community
 ########################## GO HERD ###############################
 ##################################################################
