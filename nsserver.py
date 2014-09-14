@@ -50,7 +50,7 @@ try:
 				#ASSIGN 0 TO ALL VARIABLES
 				clip = []
 				ip = ''
-				time = ''
+				eventtime = ''
 				alert = ''
 				mess = ''
 				flag = 0
@@ -63,12 +63,12 @@ try:
 					try:
 						clip = shell.split(',')
 						ip = clip[0]
-						time = clip[1]
+						eventtime = clip[1]
 						alert = clip[2]
 						mess = clip[3]
 					
                 		#PREPARE SQL QUERY TO INSERT A RECORD INTO THE DATABASE
-						sql = "INSERT INTO Attacks (rpi_ip,time,alert_level,message)  VALUES (\'" + ip + "\',\'" + time + "\',\'" + alert + "\',\'" + mess + "\');"
+						sql = "INSERT INTO Attacks (rpi_ip,time,alert_level,message)  VALUES (\'" + ip + "\',\'" + eventtime + "\',\'" + alert + "\',\'" + mess + "\');"
 						clip[:] = []
 
 						try:
