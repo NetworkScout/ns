@@ -100,7 +100,7 @@ try:
 
 
 except sys.excepthook, e:
-	print("Network scout had an issue... " + format(e))
+	print("Network-Scout had an issue... " + format(e))
 	pass
 
 except KeyboardInterrupt:
@@ -108,5 +108,5 @@ except KeyboardInterrupt:
 	sys.exit()
 
 except Exception, e:
-	print("Network scout had an issue... " + format(e))
+	print("Network-Scout had an issue... " + format(e))
 	pass
