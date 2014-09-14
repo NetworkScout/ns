@@ -52,12 +52,12 @@ try:
 		print("[*]********** Installing network-scout...")
 		core.kill_artillery()
 		os.mkdir("/var/networkscout")
-		subprocess.Popen("cp -r Project_Network_Scout/* /var/networkscout/", shell=True).wait()
+		subprocess.Popen("cp -r ns/* /var/networkscout/", shell=True).wait()
 		subprocess.Popen("sudo apt-get install python-rpi.gpio", shell=True).wait()
 
 		#modifying artillery
 		print("[*]**********Modding Artillery for NS logging...")
-		mod = open("Project_Network_Scout/stuff/artilleryfunction", "r")
+		mod = open("ns/stuff/artilleryfunction", "r")
 		contents = mod.read()
 		
 		artillery = open("/var/artillery/src/core.py", "a")
@@ -86,7 +86,7 @@ try:
 		
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/nsclient"):
-				fileopen = file("./Project_Network_Scout/startup/startup_network_scout_client", "r")
+				fileopen = file("./ns/startup/startup_network_scout_client", "r")
 				config = fileopen.read()
 				fileopen.close()
 				filewrite = file("/etc/init.d/nsclient", "w")
@@ -100,7 +100,7 @@ try:
 		
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/lcd_controller"):
-				fileopen = file("./Project_Network_Scout/startup/lcd_controller", "r")
+				fileopen = file("./ns/startup/lcd_controller", "r")
 				config = fileopen.read()
 				fileopen.close()
 				filewrite = file("/etc/init.d/lcd_controller", "w")
@@ -114,7 +114,7 @@ try:
 		
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/shutdown_button"):
-				fileopen = file("./Project_Network_Scout/startup/shutdown", "r")
+				fileopen = file("./ns/startup/shutdown", "r")
 				config = fileopen.read()
 				fileopen.close()
 				filewrite = file("/etc/init.d/shutdown_button", "w")
@@ -141,7 +141,7 @@ try:
 	elif option == 1:
 		print "[*]**********  Network server is preparing to install..."
 		os.mkdir("/var/networkscout/")
-		subprocess.Popen("cp -r Project_Network_Scout/* /var/networkscout/", shell=True).wait()
+		subprocess.Popen("cp -r ns/* /var/networkscout/", shell=True).wait()
 		print "[*]********** Downloading LAMP Install Script..."
 		subprocess.Popen("sudo git clone https://github.com/LikeABoss-001/Raspberry-Pi-LAMP-Install-Script.git", shell=True).wait()
 		print "[*]********** INSTALLING LAMP..."
@@ -154,7 +154,7 @@ try:
 		print "[*]********** Adding Network-Scout into startup through init scripts..."
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/nsserver"):
-				fileopen = file("./Project_Network_Scout/startup/startup_network_scout_server", "r")
+				fileopen = file("./ns/startup/startup_network_scout_server", "r")
 				config = fileopen.read()
 				filewrite = file("/etc/init.d/nsserver", "w")
 				filewrite.write(config)
@@ -167,7 +167,7 @@ try:
 		
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/lcd_controller"):
-				fileopen = file("./Project_Network_Scout/startup/lcd_controller", "r")
+				fileopen = file("./ns/startup/lcd_controller", "r")
 				config = fileopen.read()
 				fileopen.close()
 				filewrite = file("/etc/init.d/lcd_controller", "w")
@@ -182,7 +182,7 @@ try:
 		
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/shutdown_button"):
-				fileopen = file("./Project_Network_Scout/startup/shutdown", "r")
+				fileopen = file("./ns/startup/shutdown", "r")
 				config = fileopen.read()
 				fileopen.close()
 				filewrite = file("/etc/init.d/shutdown_button", "w")
