@@ -44,7 +44,7 @@ def nsserver_status():
 	try:
 							
 		for line in stdout:
-			match = re.search("/usr/bin/python /var/networkscout/nsserver.py", line) or re.search("python nsserver.py", line)
+			match = re.search("python /var/networkscout/nsserver.py", line) or re.search("python nsserver.py", line)
 							
 			if match:
 				message = 'Server...Okay\n'
