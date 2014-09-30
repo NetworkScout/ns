@@ -3,6 +3,8 @@ Network Scout
 
 Network-Scout (NS) is an extension to Artillery. NS allows you to access log files from multiple clients.
 
+Network-Scout (NS) is designed to run on Raspberry Pi hardware running Raspbian. Network-Scout (NS) might work on other hardware and linux distros but it is untested. Network-Scout (NS) will not run on Windows.
+
 Network-Scout is a python program, allowing <a href=https://github.com/trustedsec/artillery>artillery</a> to send logs to a centralized server. Network Scout has a pre-built client and server side. Network Scout can easily be set up using the provided setup script.
 
 ###
