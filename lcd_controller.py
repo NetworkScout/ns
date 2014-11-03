@@ -23,7 +23,7 @@ def artillery_status():
 
 	try:
 		for line in stdout:
-			match = re.search("python /var/artillery/artillery.py", line) or re.search("python nsserver.py", line)
+			match = re.search("/var/artillery/artillery.py", line) or re.search("python nsserver.py", line)
 				
 			if match:
 				message = 'Artillery...Okay\n'
