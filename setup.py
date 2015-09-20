@@ -47,11 +47,11 @@ UPDATED: SEPTEMBER 1, 2015 \n
 
 	##This adds the config option for Pi onto the file
 	if answer.lower() == 'y' or answer.lower() == 'yes':
-		confile = open("./config", "a")
+		confile = open("config", "a")
 		confile.write('IS_R_PI="YES"')
 		confile.close()
 	else:
-		confile = open("./config", "a")
+		confile = open("config", "a")
 		confile.write('IS_R_PI="NO"')
 		confile.close()
 	print("OPTIONS: \n1. Install Network-Scout Server\n2. Install Network-Scout Client \n3. Uninstall Network Scout \n4. Exit")
@@ -83,13 +83,13 @@ UPDATED: SEPTEMBER 1, 2015 \n
 	if option == 1:
 		print "[*]**********  Network server is preparing to install..."
 		os.mkdir("/var/networkscout/")
-		subprocess.Popen("cp -r ./* /var/networkscout/", shell=True).wait()
+		subprocess.Popen("cp -r * /var/networkscout/", shell=True).wait()
 
 		# install to rc.local
 		print "[*]********** Adding Network-Scout into startup through init scripts..."
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/nsserver"):
-				fileopen = file("./startup/startup_network_scout_server", "r")
+				fileopen = file("startup/startup_network_scout_server", "r")
 				config = fileopen.read()
 				filewrite = file("/etc/init.d/nsserver", "w")
 				filewrite.write(config)
@@ -112,7 +112,7 @@ UPDATED: SEPTEMBER 1, 2015 \n
 				subprocess.Popen("sudo apt-get install python-rpi.gpio", shell=True).wait()
 				if os.path.isdir("/etc/init.d"):
 					if not os.path.isfile("/etc/init.d/lcd_controller"):
-						fileopen = file("./ns/startup/lcd_controller", "r")
+						fileopen = file("ns/startup/lcd_controller", "r")
 						config = fileopen.read()
 						fileopen.close()
 						filewrite = file("/etc/init.d/lcd_controller", "w")
@@ -124,7 +124,7 @@ UPDATED: SEPTEMBER 1, 2015 \n
 				print "[*]********** Adding Shutdown into startup through init scripts..."
 				if os.path.isdir("/etc/init.d"):
 					if not os.path.isfile("/etc/init.d/shutdown_button"):
-						fileopen = file("./ns/startup/shutdown", "r")
+						fileopen = file("ns/startup/shutdown", "r")
 						config = fileopen.read()
 						fileopen.close()
 						filewrite = file("/etc/init.d/shutdown_button", "w")
@@ -219,7 +219,7 @@ UPDATED: SEPTEMBER 1, 2015 \n
 
 		if os.path.isdir("/etc/init.d"):
 			if not os.path.isfile("/etc/init.d/nsclient"):
-				fileopen = file("./ns/startup/startup_network_scout_client", "r")
+				fileopen = file("ns/startup/startup_network_scout_client", "r")
 				config = fileopen.read()
 				fileopen.close()
 				filewrite = file("/etc/init.d/nsclient", "w")
@@ -235,7 +235,7 @@ UPDATED: SEPTEMBER 1, 2015 \n
 			subprocess.Popen("sudo apt-get install python-rpi.gpio", shell=True).wait()
 			if os.path.isdir("/etc/init.d"):
 				if not os.path.isfile("/etc/init.d/lcd_controller"):
-					fileopen = file("./ns/startup/lcd_controller", "r")
+					fileopen = file("ns/startup/lcd_controller", "r")
 					config = fileopen.read()
 					fileopen.close()
 					filewrite = file("/etc/init.d/lcd_controller", "w")
@@ -248,7 +248,7 @@ UPDATED: SEPTEMBER 1, 2015 \n
 			print "[*]********** Adding Shutdown into startup through init scripts..."
 			if os.path.isdir("/etc/init.d"):
 				if not os.path.isfile("/etc/init.d/shutdown_button"):
-					fileopen = file("./ns/startup/shutdown", "r")
+					fileopen = file("ns/startup/shutdown", "r")
 					config = fileopen.read()
 					fileopen.close()
 					filewrite = file("/etc/init.d/shutdown_button", "w")
