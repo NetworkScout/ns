@@ -105,7 +105,7 @@ UPDATED: SEPTEMBER 1, 2015 \n
 				subprocess.Popen("sudo git clone https://github.com/LikeABoss-001/Raspberry-Pi-LAMP-Install-Script.git", shell=True).wait()
 				print "[*]********** INSTALLING LAMP..."
 				print"[!]This may take a few minutes. Feel free to get a coffee. [!]"
-				subprocess.Popen("sudo chmod +x /home/pi/Raspberry-Pi-LAMP-Install-Script/install.sh && /home/pi/Raspberry-Pi-LAMP-Install-Script/install.sh", shell=True).wait()
+				subprocess.Popen("sudo chmod +x /home/pi/ns/Raspberry-Pi-LAMP-Install-Script/install.sh && /home/pi/ns/Raspberry-Pi-LAMP-Install-Script/install.sh", shell=True).wait()
 				subprocess.Popen("rm -rf Raspberry-Pi-LAMP-Install-Script/",shell=True).wait()
 				subprocess.Popen("sudo apt-get install python-rpi.gpio", shell=True).wait()
 				print "[*]********** Adding LCD controller into startup through init scripts..."
