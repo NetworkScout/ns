@@ -43,7 +43,7 @@ try:
 			##SETS MYSQL OR FILE CREATION
 			rpi = core.read_config("IS_R_PI")
 
-			if rpi = "NO":
+			if rpi == "NO":
 				log_size = os.stat("/var/networkscout/stuff/recievedinfo").st_size
 				if log_size < 1:
 					pass
@@ -62,7 +62,7 @@ try:
 					cleanfile.write(' ')
 					cleanfile.close()
 
-			elif rpi = "YES":
+			elif rpi == "YES":
 				log_size = os.stat("/var/networkscout/stuff/recievedinfo").st_size
 				if log_size < 1:
 					pass
@@ -111,10 +111,10 @@ try:
 						except:
 							pass
 
-	            	#DISCONNECT FROM SERVER
+					#DISCONNECT FROM SERVER
 					db.close()
 
-					#checks to ensure all data is in database
+						#checks to ensure all data is in database
 					if flag is 1:
 						pass
 					else:
@@ -122,8 +122,8 @@ try:
 						cleanfile=open('/var/networkscout/stuff/recievedinfo','w')
 						cleanfile.write(' ')
 						cleanfile.close()
-				else:
-					raise Error("The config file is incorrectly configured.");
+			else:
+				raise Error("The config file is incorrectly configured.");
 
 
 except sys.excepthook, e:
