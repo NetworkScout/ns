@@ -30,11 +30,11 @@ try:
 	print("If you are installing the client side, please download artillery first.\n")
 
 	print(
-	"""            *              *                     * \n
-            |              /                       /  \n
+	"""        *               *                       * \n
+            |              /                      /  \n
             |             /                      /  \n
             |            /                      /   \n
-_______________+___________+______________________+_____\n
+____________+___________+______________________+_____\n
 NETWORK SCOUT \n
 VERSION: 2.0 "THUNDERING HERD" \n
 CREATORS: SHAWN JORDAN AND AEDAN SOMERVILLE \n
@@ -152,7 +152,7 @@ UPDATED: SEPTEMBER 1, 2015 \n
 			ismysql = raw_input("Will you be using MySQL? (Y/N) *If not, we will use PHP to create the table* ")
 			if ismysql.lower() == 'y' or ismysql.lower() == 'yes':
 				print("************************** Creating Database for Logs ***********************")
-				subprocess.Popen()"sudo apt-get install python-mysqldb", shell=True).wait()
+				subprocess.Popen("sudo apt-get install python-mysqldb", shell=True).wait()
 				subprocess.Popen("python /var/networkscout/stuff/mysqltablecreator.py", shell=True).wait()
 				if os.path.isdir("/var/www/html/"):
 					subprocess.Popen("mv /var/networkscout/website/* /var/www/html/", shell=True).wait()
@@ -176,17 +176,8 @@ UPDATED: SEPTEMBER 1, 2015 \n
 	elif option == 2:
 		print("[*]********** Installing network-scout...")
 		core.kill_artillery()
-		if os.mkdir("/var/networkscout"):
-			subprocess.Popen("cp -r ./* /var/networkscout/", shell=True).wait()
-		elif os.isdir("/var/networkscout"):
-			errormes = raw_input("Network scout already exists. Do you want to continue?")
-			if errormes.lower() == 'y' or isrpi.lower() == 'yes':
-				subprocess.Popen("rm -rf /var/networkscout/", shell=True).wait()
-				subprocess.Popen("cp -r ./* /var/networkscout/", shell=True).wait()
-			else:
-				pass
-		else:
-			pass
+		os.mkdir("/var/networkscout"):
+		subprocess.Popen("cp -r ./* /var/networkscout/", shell=True).wait()
 
 
 		#modifying artillery
