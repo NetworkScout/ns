@@ -28,7 +28,7 @@ try:
 			s.bind((HOST,PORT))
 			s.listen(4)
 			(conn, (ip, port)) = s.accept()
-			data = conn.recv(2024)
+			data = conn.recv(2048)
 
 			#RECEIVE DATA FROM TCP CONNECTION
 			dfile = open("/var/networkscout/stuff/recievedinfo", "w")
