@@ -80,7 +80,7 @@ if os.path.isdir("/var/artillery/"):
 
 		#Prints the variables to the screen
 		lcd.message( (status) )
-		lcd.message('%s' % ( ipaddr ) )
+		lcd.message( (ipaddr) )
 		
 		#Waits 1 minute to update
 		time.sleep(60)
