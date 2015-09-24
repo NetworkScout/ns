@@ -152,7 +152,7 @@ UPDATED: SEPTEMBER 1, 2015 \n
 			ismysql = raw_input("Will you be using MySQL? (Y/N) *If not, we will use PHP to create the table* ")
 			if ismysql.lower() == 'y' or ismysql.lower() == 'yes':
 				print("************************** Creating Database for Logs ***********************")
-				subprocess.Popen()"sudo apt-get install python-mysqldb", shell=True).wait()
+				subprocess.Popen("sudo apt-get install python-mysqldb", shell=True).wait()
 				subprocess.Popen("python /var/networkscout/stuff/mysqltablecreator.py", shell=True).wait()
 				if os.path.isdir("/var/www/html/"):
 					subprocess.Popen("mv /var/networkscout/website/* /var/www/html/", shell=True).wait()
