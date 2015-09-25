@@ -11,7 +11,7 @@
 #################################################################################
 
 from source import core
-import sys, os, subprocess, socket
+import sys, os, subprocess, socket, MySQLdb
 #Starting Server side programs
 
 try:
@@ -28,7 +28,7 @@ try:
 			s.bind((HOST,PORT))
 			s.listen(4)
 			(conn, (ip, port)) = s.accept()
-			data = conn.recv(2024)
+			data = conn.recv(2048)
 
 			#RECEIVE DATA FROM TCP CONNECTION
 			dfile = open("/var/networkscout/stuff/recievedinfo", "w")
@@ -81,7 +81,7 @@ try:
 					flag = 0
 
 					#OPEN DATABASE TO MAKE SERVER CONNECTION
-					db = msdb.connect("localhost","root","raspberry","Network_Scout")
+					db = MySQLdb.connect("localhost","root","raspberry","Network_Scout")
 					cursor = db.cursor()
 
 					for shell in loader:

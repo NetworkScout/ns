@@ -67,7 +67,7 @@ def send_log_to_server(log_path,server):
 	file.close()
 	#sending and closing connection
 	s.send( (contents) )
-	data = s.recv(2024)
+	data = s.recv(2048)
 	s.close()
 	return
 	
