@@ -176,7 +176,7 @@ UPDATED: SEPTEMBER 1, 2015 \n
 	elif option == 2:
 		print("[*]********** Installing network-scout...")
 		core.kill_artillery()
-		os.mkdir("/var/networkscout"):
+		os.mkdir("/var/networkscout")
 		subprocess.Popen("cp -r ./* /var/networkscout/", shell=True).wait()
 
 
